@@ -1,0 +1,14 @@
+html {
+	background: url('../img/bkgd_atsunset.jpg') no-repeat center center fixed;
+			-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  /* font-family: 'Lato', sans-serif; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
