@@ -1,10 +1,10 @@
-# ClickyTime
+<h1 align="center">ClickyTime</h1>
 
-## Adventure Time-themed memory game, built with React. *Mathematical!*
+<div align="center">Adventure Time-themed memory game, built with React. Mathematical!</div>
 
-## Deployed Application
+<!-- ## Deployed Application
 
-[GitHub Pages] <https://link-here.com>
+[GitHub Pages] <https://link-here.com> -->
 
 <!-- Use extension to make TOC -->
 <!-- ## Contents -->
@@ -13,7 +13,7 @@
 
 ## Technologies Used
 
-Lorem ipsum, dolor sit
+React, Yarn, JSX, CSS
 
 ## Key Features
 
