@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, Row, Col, Container } from 'react-materialize';
-// import logo from './logo.svg';
+import { Row, Col, Container } from 'react-materialize';
 import './styles/App.css';
 import Game from './components/Game';
 
@@ -8,12 +7,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container>
+        {/*<Container>*/}
 
+          {/*Switch to navbar?*/}
           <header className="App-header">
-            {/*<img src={logo} className="App-logo" alt="logo" />*/}
             <h1 className="App-title">ClickyTime</h1>
+            <p className="score">Score goes here!</p>
           </header>
+
+        <Container>
           <p className="App-intro">
             How good is your memory? Click on each square only once!
           </p>
