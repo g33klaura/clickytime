@@ -8,7 +8,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*<div className="Container">*/}
         <Container>
 
           <header className="App-header">
@@ -18,7 +17,7 @@ class App extends Component {
           <p className="App-intro">
             How good is your memory? Click on each square only once!
           </p>
-          <Row>
+          <Row className="Game">
             <Col s={12} className={"center-align"}>
               <Game />
             </Col>
