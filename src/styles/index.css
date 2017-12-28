@@ -1,10 +1,10 @@
 html {
 	background: url('../img/bkgd_atsunset.jpg') no-repeat center center fixed;
-			-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
-  /* font-family: 'Lato', sans-serif; */
+		-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'Josefin Slab', serif;
 }
 
 body {
@@ -12,3 +12,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+h1 {
+	font-family: 'Fredericka the Great', cursive;
+}
+
+
+
+/* font-family: 'Josefin Slab', serif;
+font-family: 'Fredericka the Great', cursive; */
