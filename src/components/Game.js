@@ -24,12 +24,12 @@ const squares = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/)
 
 // Needs to be Component Class, pulling from Squares Component****
 // Think reusable blocks of code...
+{/* 
 const Game = props => (
   <main className="squares">
     <Row>
       <Col l={3} m={4} s={6}>
-        {/*<Card className="small" header={<CardTitle image={squares["abracadaniel.png"]}></CardTitle>}>
-        </Card>*/}
+        
         <img src={squares["abracadaniel.png"]} alt="abracadaniel" className="z-depth-4" />
       </Col>
 
@@ -79,5 +79,24 @@ const Game = props => (
     </Row>
   </main>
 );
+*/}
 
-export default Game;
+export class Game extends React.Component {
+
+  // Use "building block" from Squares to render each image in the materialize divs?
+
+  // Need array of squares
+
+  render() {
+    return (
+      <main className="game-squares">
+        <Row>
+          {/* Each of 12 squares rendered within this row div */}
+        </Row>
+      </main>
+    )
+  }
+
+}
+
+// export default Game;
