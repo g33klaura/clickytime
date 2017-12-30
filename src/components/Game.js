@@ -1,13 +1,12 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { Button, Card, Row, Col, CardTitle } from 'react-materialize';
 import '../styles/Game.css';
-// import Squares from "./Squares.js";
+import Squares from "./Squares.js";
 
 // Images need imports too???
 // import abracadaniel from '../img/abracadaniel.png';
 
-// **************************************
+// ****************************************************************************
 // Map over each image in 'img' rather than importing each one
 // Thank you this guy: https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
 function importAll(squareImg) {
@@ -21,8 +20,10 @@ function importAll(squareImg) {
 const squares = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
 
 // <img src={images['doggy.png']} />
-// **************************************
+// ****************************************************************************
 
+// Needs to be Component Class, pulling from Squares Component****
+// Think reusable blocks of code...
 const Game = props => (
   <main className="squares">
     <Row>
