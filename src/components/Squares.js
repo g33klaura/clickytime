@@ -12,7 +12,7 @@ const Squares = props => {
   // alt text & id still undefined.......
   return (
     <Col l={3} m={4} s={6}>
-      <img src={ props.image } alt={ props.name } key={ props.id } className="z-depth-4" />
+      <img src={ props.image } alt={ props.name } key={ props.id } className="z-depth-4" onClick={ props.onClick } />
     </Col>
   )
 

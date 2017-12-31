@@ -15,6 +15,11 @@ class Game extends React.Component {
     friends
   };
 
+  handleClick = () => {
+    // this.handleClick = this.handleClick.bind(this);
+    console.log("Image clicked");
+  }
+
   render() {
     return (
       <main className="game-squares">
@@ -25,8 +30,9 @@ class Game extends React.Component {
               image={ friends.image }
               alt={ friends.name }
               key={ friends.id }
+              onClick={ this.handleClick() }
             />
-          ))}   
+          ))}
         </Row>
       </main>
     )
