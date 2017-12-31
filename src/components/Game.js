@@ -19,6 +19,7 @@ class Game extends React.Component {
           {/* Need map or filter here? Can I use the same thing I used when hard-coded? (saved it to scratch.js*****) */}
           {/*<Col l={3} m={4} s={6}>*/}
           <Squares 
+            
             image={ friends[0].image }
             alt={ friends[0].name }
             key={ friends[0].id }
@@ -32,3 +33,6 @@ class Game extends React.Component {
 }
 
 export default Game;
+
+// This was just above alt
+// image={ friends[0].image }
