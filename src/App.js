@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-materialize';
 import './styles/App.css';
 import Game from './components/Game';
-// import Squares from "./components/Squares";
-// import friends from "./friends.json";
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*<Container>*/}
 
           {/*Switch to navbar?*/}
           <header className="App-header">
@@ -23,19 +21,8 @@ class App extends Component {
           </p>
           <Row className="Game">
             <Col s={12} className={"center-align"}>
-              
+              {/* Game component renders here within overall centered materialize div */}
               <Game />
-
-              {/*<main className="game-squares">
-    <Row>*/}
-                  {/* Each of 12 squares rendered within this row div */}
-                  {/*<Squares 
-                    image={ friends[0].image }
-                    alt={ friends[0].name }
-                    key={ friends[0].id }
-                  />
-                </Row>
-                  </main>*/}
 
             </Col>
           </Row>

@@ -3,10 +3,7 @@ import { Row } from 'react-materialize';
 import '../styles/Game.css';
 import Squares from "./Squares";
 import friends from "../friends.json";
-// import image from "../img/"
 
-// Images need imports too???
-// import abracadaniel from '../img/abracadaniel.png';
 
 // ****************************************************************************
 // Map over each image in 'img' rather than importing each one
@@ -28,19 +25,14 @@ import friends from "../friends.json";
 
 class Game extends React.Component {
 
-  // Use "building block" from Squares to render each image in the materialize divs?
-
-  // Need array of squares
-  
-  
-  // test () => console.log({ friends[0].image });
+  // Use "building block" component from Squares to render each image in the materialize divs
    
   render() {
     return (
       <main className="game-squares">
         <Row>
           {/* Each of 12 squares rendered within this row div */}
-          {/* */}
+          {/* Need map or filter here? Can I use the same thing I used when hard-coded? (saved it to scratch.js*****) */}
           <Squares 
             image={ friends[0].image }
             alt={ friends[0].name }
