@@ -5,11 +5,12 @@ import Squares from "./Squares";
 import friends from "../friends.json";
 
 
-// Moved initally hard-coded images to scratch sheet so i stop getting a warning...
-
+// Component class for rendering all game squares from friends.json
 class Game extends React.Component {
 
   // Use "building block" component from Squares to render each image in the materialize divs
+
+  // Activity 16.... how does this work now?....
   state = {
     friends
   };
@@ -19,18 +20,13 @@ class Game extends React.Component {
       <main className="game-squares">
         <Row>
           {/* Each of 12 squares rendered within this row div */}
-          {/* Need map or filter here? Can I use the same thing I used when hard-coded? (saved it to scratch.js*****) */}
-          {/*<Col l={3} m={4} s={6}>*/}
-
           {this.state.friends.map(friends => (
             <Squares 
               image={ friends.image }
               alt={ friends.name }
               key={ friends.id }
             />
-          ))}
-          
-          {/*</Col>*/}
+          ))}   
         </Row>
       </main>
     )
