@@ -32,7 +32,12 @@ class Game extends React.Component {
       click: true
     });
     console.log("Image clicked");
-    console.log(friends.id);
+    // console.log(this.props.id);
+    // ^^Don't think it's grabbing from page, think it's trying to grab from friendS.json
+    // Breaks if remove the 's'
+    
+    // Undefined with this.props.id.... probably b/c that comes up undefined in browser
+    console.log(this.props.id);
   }
 
   render() {
@@ -40,11 +45,11 @@ class Game extends React.Component {
       <main className="game-squares">
         <Row>
           {/* Each of 12 squares rendered within this row div */}
-          {this.state.friends.map(friends => (
+          {this.state.friends.map(friend => (
             <Squares 
-              image={ friends.image }
-              alt={ friends.name }
-              key={ friends.id }
+              image={ friend.image }
+              alt={ friend.name }
+              key={ friend.id }
               click={ this.state.click }
               onClick={ this.handleClick }
               color-test={ this.state.color }
