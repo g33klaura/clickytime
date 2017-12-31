@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col } from 'react-materialize';
 
-// const Squares = props => 
-//   (const abracadaniel = URL('../img/abracadaniel.png'););
+
+// const abracadaniel = URL('../img/abracadaniel.png');
 
 
 // Template for each repeating square?
