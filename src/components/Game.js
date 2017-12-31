@@ -24,6 +24,7 @@ class Game extends React.Component {
       color: "testing this connects" 
     };
     this.handleClick = this.handleClick.bind(this);
+    console.log(this.props);
   }
 
   handleClick = () => {
@@ -35,9 +36,10 @@ class Game extends React.Component {
     // console.log(this.props.id);
     // ^^Don't think it's grabbing from page, think it's trying to grab from friendS.json
     // Breaks if remove the 's'
-    
+
     // Undefined with this.props.id.... probably b/c that comes up undefined in browser
-    console.log(this.props.id);
+    console.log(this.id);
+    // console.log(this.state.friend.id);
   }
 
   render() {
@@ -50,6 +52,7 @@ class Game extends React.Component {
               image={ friend.image }
               alt={ friend.name }
               key={ friend.id }
+              id={ friend.id }
               click={ this.state.click }
               onClick={ this.handleClick }
               color-test={ this.state.color }
