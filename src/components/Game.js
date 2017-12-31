@@ -17,6 +17,9 @@ class Game extends React.Component {
 
   handleClick = () => {
     // this.handleClick = this.handleClick.bind(this);
+    this.setState({
+      click: true
+    });
     console.log("Image clicked");
   }
 
@@ -30,7 +33,8 @@ class Game extends React.Component {
               image={ friends.image }
               alt={ friends.name }
               key={ friends.id }
-              onClick={ this.handleClick() }
+              
+              onClick={ this.handleClick }
             />
           ))}
         </Row>
