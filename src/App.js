@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-materialize';
 import './styles/App.css';
 import Game from './components/Game';
+import friends from "./friends.json";
 
 class App extends Component {
   render() {
