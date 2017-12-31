@@ -13,7 +13,7 @@ const Squares = props => {
   // yet ARE defined in Game.js in <Squares ... />
   return (
     <Col l={3} m={4} s={6}>
-      <img src={ props.image } alt={ props.name } key={ props.id } className="z-depth-4" data-state={ props.click } onClick={ props.onClick } />
+      <img src={ props.image } alt={ props.name } id={ props.id } key={ props.id } className="z-depth-4" data-click={ props.click } onClick={ props.onClick } />
     </Col>
   )
 

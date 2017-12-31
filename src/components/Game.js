@@ -12,7 +12,8 @@ class Game extends React.Component {
 
   // Activity 16.... how does this work now?....
   state = {
-    friends
+    friends,
+    click: false
   };
 
   handleClick = () => {
@@ -33,7 +34,7 @@ class Game extends React.Component {
               image={ friends.image }
               alt={ friends.name }
               key={ friends.id }
-              
+              click={ this.state.click }
               onClick={ this.handleClick }
             />
           ))}
