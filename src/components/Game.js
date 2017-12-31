@@ -22,7 +22,7 @@ class Game extends React.Component {
           {/* Need map or filter here? Can I use the same thing I used when hard-coded? (saved it to scratch.js*****) */}
           {/*<Col l={3} m={4} s={6}>*/}
 
-          {this.state.friends.map(friend => (
+          {this.state.friends.map(friends => (
             <Squares 
               image={ friends.image }
               alt={ friends.name }
