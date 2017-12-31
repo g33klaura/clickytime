@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "abracadaniel",
+    "image": "./img/abracadaniel.png"
+  },
+  {
+    "id": 2,
+    "name": "billy_and_canyon",
+    "image": "./img/billycanyon.png"
+  },
+  {
+    "id": 3,
+    "name": "goliad",
+    "image": "./img/goliad.png"
+  },
+  {
+    "id": 4,
+    "name": "jake",
+    "image": "./img/jake.png"
+  },
+  {
+    "id": 5,
+    "name": "lsp_missing_lumps",
+    "image": "./img/lspmissing.png"
+  },
+  {
+    "id": 6,
+    "name": "memow",
+    "image": "./img/memow.png"
+  },
+  {
+    "id": 7,
+    "name": "lemongrab_all_better",
+    "image": "./img/newlemongrab.png"
+  },
+  {
+    "id": 8,
+    "name": "princess_cookie",
+    "image": "./img/princesscookie.png"
+  },
+  {
+    "id": 9,
+    "name": "prismo",
+    "image": "./img/prismo.png"
+  },
+  {
+    "id": 10,
+    "name": "shelby_and_little_brother",
+    "image": "./img/shelbylilbro.png"
+  },
+  {
+    "id": 11,
+    "name": "sweet_p",
+    "image": "./img/sweetp.png"
+  },
+  {
+    "id": 12,
+    "name": "treetrunks",
+    "image": "./img/treetrunks.png"
+  }
+]
