@@ -11,10 +11,20 @@ class Game extends React.Component {
   // Use "building block" component from Squares to render each image in the materialize divs
 
   // Activity 16.... how does this work now?....
-  state = {
-    friends,
-    click: false
-  };
+  // state = {
+  //   friends,
+  //   click: false
+  // };
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+      friends,
+      click: false,
+      color: "testing this connects" 
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
   handleClick = () => {
     // this.handleClick = this.handleClick.bind(this);
@@ -22,6 +32,7 @@ class Game extends React.Component {
       click: true
     });
     console.log("Image clicked");
+    console.log(friends.id);
   }
 
   render() {
@@ -36,6 +47,7 @@ class Game extends React.Component {
               key={ friends.id }
               click={ this.state.click }
               onClick={ this.handleClick }
+              color-test={ this.state.color }
             />
           ))}
         </Row>
