@@ -10,7 +10,10 @@ import friends from "../friends.json";
 class Game extends React.Component {
 
   // Use "building block" component from Squares to render each image in the materialize divs
-   
+  state = {
+    friends
+  };
+
   render() {
     return (
       <main className="game-squares">
@@ -18,12 +21,15 @@ class Game extends React.Component {
           {/* Each of 12 squares rendered within this row div */}
           {/* Need map or filter here? Can I use the same thing I used when hard-coded? (saved it to scratch.js*****) */}
           {/*<Col l={3} m={4} s={6}>*/}
-          <Squares 
-            
-            image={ friends[0].image }
-            alt={ friends[0].name }
-            key={ friends[0].id }
-          />
+
+          {this.state.friends.map(friend => (
+            <Squares 
+              image={ friends.image }
+              alt={ friends.name }
+              key={ friends.id }
+            />
+          ))}
+          
           {/*</Col>*/}
         </Row>
       </main>
@@ -34,5 +40,9 @@ class Game extends React.Component {
 
 export default Game;
 
-// This was just above alt
-// image={ friends[0].image }
+// This was between <Row> </Row>
+// <Squares 
+//             image={ friends[0].image }
+//             alt={ friends[0].name }
+//             key={ friends[0].id }
+// />
