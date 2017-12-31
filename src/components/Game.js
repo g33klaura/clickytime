@@ -40,8 +40,11 @@ class Game extends React.Component {
       <main className="game-squares">
         <Row>
           {/* Each of 12 squares rendered within this row div */}
+          {/* */}
           <Squares 
-            image={ friends[0].image } alt={ friends[0].name } key={ friends[0].id }
+            image={ friends[0].image }
+            alt={ friends[0].name }
+            key={ friends[0].id }
           />
         </Row>
       </main>
