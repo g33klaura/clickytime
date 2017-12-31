@@ -32,6 +32,8 @@
 
 .score {
   float: right;
+  position: relative;
+  bottom: 300%;
 }
 
 .Game {
