@@ -3,9 +3,10 @@ import { Row } from 'react-materialize';
 import '../styles/Game.css';
 import Squares from "./Squares";
 import friends from "../friends.json";
+// import image from "../img/"
 
 // Images need imports too???
-// import abracadaniel from '../img/abracadaniel.png';
+import abracadaniel from '../img/abracadaniel.png';
 
 // ****************************************************************************
 // Map over each image in 'img' rather than importing each one
@@ -40,7 +41,7 @@ class Game extends React.Component {
         <Row>
           {/* Each of 12 squares rendered within this row div */}
           <Squares 
-            image={ friends[0].image }
+            image={ `static/img` {friends[0].image} }
             alt={ friends[0].name }
             key={ friends[0].id }
           />
