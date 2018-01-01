@@ -2,61 +2,73 @@
   {
     "id": 1,
     "name": "abracadaniel",
-    "image": "./img/abracadaniel.png"
+    "image": "./img/abracadaniel.png",
+    "click": false
   },
   {
     "id": 2,
     "name": "billy_and_canyon",
-    "image": "./img/billycanyon.png"
+    "image": "./img/billycanyon.png",
+    "click": false
   },
   {
     "id": 3,
     "name": "goliad",
-    "image": "./img/goliad.png"
+    "image": "./img/goliad.png",
+    "click": false
   },
   {
     "id": 4,
     "name": "jake",
-    "image": "./img/jake.png"
+    "image": "./img/jake.png",
+    "click": false
   },
   {
     "id": 5,
     "name": "lsp_missing_lumps",
-    "image": "./img/lspmissing.png"
+    "image": "./img/lspmissing.png",
+    "click": false
   },
   {
     "id": 6,
     "name": "memow",
-    "image": "./img/memow.png"
+    "image": "./img/memow.png",
+    "click": false
   },
   {
     "id": 7,
     "name": "lemongrab_all_better",
-    "image": "./img/newlemongrab.png"
+    "image": "./img/newlemongrab.png",
+    "click": false
   },
   {
     "id": 8,
     "name": "princess_cookie",
-    "image": "./img/princesscookie.png"
+    "image": "./img/princesscookie.png",
+    "click": false
   },
   {
     "id": 9,
     "name": "prismo",
-    "image": "./img/prismo.png"
+    "image": "./img/prismo.png",
+    "click": false
   },
   {
     "id": 10,
     "name": "shelby_and_little_brother",
-    "image": "./img/shelbylilbro.png"
+    "image": "./img/shelbylilbro.png",
+    "click": false
   },
   {
     "id": 11,
     "name": "sweet_p",
-    "image": "./img/sweetp.png"
+    "image": "./img/sweetp.png",
+    "click": false
   },
   {
     "id": 12,
     "name": "treetrunks",
-    "image": "./img/treetrunks.png"
+    "image": "./img/treetrunks.png",
+    "click": false
   }
 ]
