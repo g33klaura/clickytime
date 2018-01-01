@@ -3,12 +3,11 @@ import { Row } from 'react-materialize';
 import '../styles/Game.css';
 import Squares from "./Squares";
 import friends from "../friends.json";
+// import { props } from "./Squares"
 
 
 // Component class for rendering all game squares from friends.json
 class Game extends React.Component {
-
-
 
   // Activity 16.... how does this work now?....
   // state = {
@@ -19,8 +18,9 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
+    // state = {
       friends,
-      click: false,
+      // click: false,
       color: "testing this connects" 
     };
     this.handleClick = this.handleClick.bind(this);
@@ -28,41 +28,26 @@ class Game extends React.Component {
   }
 
   handleClick = () => {
-    // this.handleClick = this.handleClick.bind(this);
 
-    // componentDidMount = () => {
     //   this.setState({
     //     click: true
     //   });
     //   console.log("Image clicked");
-    // } 
-      
-    
 
-    this.setState({
-      click: true
-    });
+    // this.setState( () => ({
+    //   friends: {
+    //     click: true
+    //   }
+    // }) )
+
+    // this.setState({
+    //   friends
+    // });
     console.log("Image clicked");
+    console.log(this);
 
-    console.log(this.state.key);
-
-    // console.log(this.friends.id);  //error "_this.friends is undefined"
-
-    // console.log(friends.id);  //undefined
-      // ^^Don't think it's grabbing from page, think it's trying to grab from friendS.json
-      // Breaks if remove the 's'
-
-    // console.log(this.friend.id);  //error "_this.friend is undefined"
-
-    // console.log(this.props.id);  //undefined
-
-    // console.log(this.id);  //undefined
-
-    // const thisImg = document.getElementById(friends.id);
-    // console.log(thisImg);
-    // console.log(this.img.id);  
-
-    // console.log(this.state.friend.id);  //error "_this.state.friend is undefined"
+    // console.log(object);
+    // ^^start over trying to determine which image was clicked....
   }
 
   // Use "building block" component from Squares to render each image in the materialize divs
@@ -77,7 +62,8 @@ class Game extends React.Component {
               alt={ friend.name }
               key={ friend.id }
               id={ friend.id }
-              click={ this.state.click }
+              // click={ this.state.click }
+              click={ friend.click }
               onClick={ this.handleClick }
               color-test={ this.state.color }
             />
