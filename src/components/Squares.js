@@ -8,9 +8,7 @@ import { Col } from 'react-materialize';
 // Template for each repeating square
 const Squares = props => {
 
-  // Will render in row div in Game Component?  ~YES
-  // alt text & id still undefined.......
-  // yet ARE defined in Game.js in <Squares ... />
+  // renders with image, alt, and ids; data-click and onClick registers, just cannot target which image is clicked yet..........
   return (
     <Col l={3} m={4} s={6}>
       <img src={ props.image } 
@@ -19,6 +17,7 @@ const Squares = props => {
       id={ props.id } 
       data-click={ props.click } 
       onClick={ props.onClick } 
+      // onClick={ this.props.onClick }  //error
       className="z-depth-4"
       />
     </Col>
