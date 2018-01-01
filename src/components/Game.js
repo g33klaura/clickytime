@@ -23,35 +23,46 @@ class Game extends React.Component {
       click: false,
       color: "testing this connects" 
     };
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     console.log(this.props);
   }
 
   handleClick = () => {
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
+
+    // componentDidMount = () => {
+    //   this.setState({
+    //     click: true
+    //   });
+    //   console.log("Image clicked");
+    // } 
+      
+    
+
     this.setState({
       click: true
     });
     console.log("Image clicked");
 
+    console.log(this.state.key);
+
     // console.log(this.friends.id);  //error "_this.friends is undefined"
 
-    console.log(friends.id);  //undefined
+    // console.log(friends.id);  //undefined
       // ^^Don't think it's grabbing from page, think it's trying to grab from friendS.json
       // Breaks if remove the 's'
 
     // console.log(this.friend.id);  //error "_this.friend is undefined"
 
-    console.log(this.props.id);  //undefined
+    // console.log(this.props.id);  //undefined
 
-    console.log(this.id);  //undefined
+    // console.log(this.id);  //undefined
 
     // const thisImg = document.getElementById(friends.id);
     // console.log(thisImg);
     // console.log(this.img.id);  
 
     // console.log(this.state.friend.id);  //error "_this.state.friend is undefined"
-    
   }
 
   // Use "building block" component from Squares to render each image in the materialize divs
