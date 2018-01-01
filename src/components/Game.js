@@ -46,7 +46,12 @@ class Game extends React.Component {
 
     console.log(this.id);  //undefined
 
+    // const thisImg = document.getElementById(friends.id);
+    // console.log(thisImg);
+    // console.log(this.img.id);  
+
     // console.log(this.state.friend.id);  //error "_this.state.friend is undefined"
+    
   }
 
   // Use "building block" component from Squares to render each image in the materialize divs
