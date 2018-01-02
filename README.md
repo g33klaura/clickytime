@@ -2,9 +2,9 @@
 
 <div align="center">Adventure Time-themed memory game, built with React. Mathematical!</div>
 
-<!-- ## Deployed Application
+## Deployed Application
 
-[GitHub Pages] <https://link-here.com> -->
+[GitHub Pages] <https://g33klaura.github.io/clickytime/>
 
 <!-- Use extension to make TOC -->
 <!-- ## Contents -->
@@ -13,7 +13,7 @@
 
 ## Technologies Used
 
-React, Yarn, JSX, Materialize CSS
+React, JSX, Materialize CSS
 
 ## Key Features
 
@@ -21,7 +21,7 @@ React, Yarn, JSX, Materialize CSS
 * Componitized page elements
 * Dynamic scoring and messaging
 * Responsive design
-* BMO favicon
+* BMO favicon <br>
 ![BMO favicon](./screenshots/bmo_favicon.png)
 
 ### Application Process
