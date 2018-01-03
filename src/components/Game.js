@@ -11,20 +11,47 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-    // state = {
-      friends, 
+      friends 
     };
     // console.log(this.props);
   }
 
-  handleClick = (id) => {
 
-    // this.setState({
-    //   friends
-    // });
-    console.log("Image clicked");
+  handleClick = (id) => {
+    // ^^Stores the id of image clicked in parameter
+
+    // console.log("Image clicked");
     console.log(id);
 
+    // Compared whether or not been clicked before 
+    let guessedCorrectly = false;
+
+    const squaresMap = this.state.friends.map(friend => {
+      // Makes a copy of the friends array to manupulate
+      const newFriendData = { ...friend };
+
+      // then match the id to one in array AND check if click is currently true or false
+      if (newFriendData.id === id) {
+        if (!newFriendData.click) {
+
+          newFriendData.click = true;
+          guessedCorrectly = true;
+
+          console.log(friend);
+        } 
+        // console.log(newFriendData);
+        return newFriendData;
+      }
+      return squaresMap;   
+    });
+    console.log(squaresMap);  //returns just the image that's now set to click: true
+    
+    // what makes this re-render changes in the dom.......
+    // do i set state again?.........
+    this.setState = {
+      squaresMap
+    }
+    guessedCorrectly ? console.log("Correct guess") : console.log("Incorrect guess");
   }
 
   // Use "building block" component from Squares to render each image in the materialize divs
@@ -46,7 +73,6 @@ class Game extends React.Component {
       </main>
     )
   }
-
 }
 
 export default Game;
