@@ -2,10 +2,7 @@ import React from 'react';
 import { Col } from 'react-materialize';
 
 
-// Need onClick listener
-// Need to DEFINE the onClick too************
-
-// Template for each repeating square
+// Template for each repeating image square
 const Squares = props => (
     <Col l={3} m={4} s={6}>
       <img src={ props.image } 
@@ -20,9 +17,3 @@ const Squares = props => (
   );
 
 export default Squares;
-
-// onClick={ props.onClick }
-// onClick={ () => props.onClick(props.id) }
-      // onClick={ props.onClick } 
-      // onClick={ this.props.onClick }  //error
-      // onClick={ props.onClick.bind(props.id) }
