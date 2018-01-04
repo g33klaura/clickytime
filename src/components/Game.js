@@ -11,7 +11,9 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      friends 
+      friends,
+      score: 0,
+      message: null
     };
     // console.log(this.props);
   }
@@ -88,8 +90,8 @@ class Game extends React.Component {
               key={ friend.id }
               id={ friend.id }
               click={ friend.click }
-              handleClick={() => this.handleClick(friend.id)}
-              // handleClick={ this.handleClick }
+              // handleClick={() => this.handleClick(friend.id)}
+              handleClick={ this.handleClick }
             />
           ))}
         </Row>
