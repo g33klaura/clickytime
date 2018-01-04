@@ -36,7 +36,7 @@ class Game extends React.Component {
 
           newFriendData.click = true;
           guessedCorrectly = true;
-
+          // Now the -next- time that same square is clicked, it should set to false and stop the game.... right??
           console.log(friend);
         } 
         // console.log(newFriendData);
@@ -47,12 +47,30 @@ class Game extends React.Component {
     console.log(squaresMap);  //returns just the image that's now set to click: true
     
     // what makes this re-render changes in the dom.......
-    // do i set state again?.........
-    this.setState = {
+    this.setState({
       squaresMap
-    }
+    });
+
+  //   this.setState(function(friends, squaresMap){
+  //     return {click: !friends.click}
+  //  });
+
+    // Reads if square was clicked before and displays message
+    // Need to change to display on page********
     guessedCorrectly ? console.log("Correct guess") : console.log("Incorrect guess");
   }
+
+  // componentDidMount() {
+  //   // this.timerID = setInterval(
+  //   //   () => this.setState(),
+  //   //   1000
+  //   // );
+  //   this.setState((friends, squaresMap) => ({
+  //     friends: friends + squaresMap
+  //     // ^^setting this to friends breaks when clicking on image square on page... what makes the state update?!
+  //   }));
+  // }
+
 
   // Use "building block" component from Squares to render each image in the materialize divs
   render() {
@@ -66,6 +84,7 @@ class Game extends React.Component {
               alt={ friend.name }
               key={ friend.id }
               id={ friend.id }
+              click={ friend.click }
               handleClick={ this.handleClick }
             />
           ))}
