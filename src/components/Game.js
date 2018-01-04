@@ -51,9 +51,16 @@ class Game extends React.Component {
       squaresMap
     });
 
-  //   this.setState(function(friends, squaresMap){
-  //     return {click: !friends.click}
-  //  });
+    // this.setState((friends, squaresMap) => (
+    //   {click: friends.click + squaresMap.click})
+    // )
+
+    // this.setState((squaresMap, props) => ({
+    //   friends: squaresMap + props
+    //   // ^^setting this to friends breaks when clicking on image square on page... what makes the state update?!
+    // }));
+
+    // this.setState({click: !this.state.click})
 
     // Reads if square was clicked before and displays message
     // Need to change to display on page********
@@ -65,10 +72,6 @@ class Game extends React.Component {
   //   //   () => this.setState(),
   //   //   1000
   //   // );
-  //   this.setState((friends, squaresMap) => ({
-  //     friends: friends + squaresMap
-  //     // ^^setting this to friends breaks when clicking on image square on page... what makes the state update?!
-  //   }));
   // }
 
 
@@ -85,7 +88,8 @@ class Game extends React.Component {
               key={ friend.id }
               id={ friend.id }
               click={ friend.click }
-              handleClick={ this.handleClick }
+              handleClick={() => this.handleClick(friend.id)}
+              // handleClick={ this.handleClick }
             />
           ))}
         </Row>

@@ -11,7 +11,8 @@ const Squares = props => (
       id={ props.id } 
       // click={ props.click.toString() }
       // Adding "() =>" tells the onClick to wait until clicked to fire the handleClick function 
-      onClick={ () => props.handleClick(props.id) } 
+      // onClick={ () => props.handleClick(props.id) }
+      onClick={ props.handleClick }
       className="z-depth-4"
       />
     </Col>
