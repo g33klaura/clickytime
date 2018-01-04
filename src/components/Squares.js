@@ -9,6 +9,7 @@ const Squares = props => (
       alt={ props.alt } 
       key={ props.id }
       id={ props.id } 
+      // click={ props.click.toString() }
       // Adding "() =>" tells the onClick to wait until clicked to fire the handleClick function 
       onClick={ () => props.handleClick(props.id) } 
       className="z-depth-4"
