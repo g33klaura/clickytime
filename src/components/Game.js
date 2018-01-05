@@ -42,27 +42,18 @@ class Game extends React.Component {
           console.log(friend);
         } 
         // console.log(newFriendData);
-        return newFriendData;
+        
       }
-      return squaresMap;   
+      return newFriendData;
+         
     });
-    console.log(squaresMap);  //returns just the image that's now set to click: true
+
+    console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
     // what makes this re-render changes in the dom.......
     this.setState({
-      squaresMap
+      friends: squaresMap
     });
-
-    // this.setState((friends, squaresMap) => (
-    //   {click: friends.click + squaresMap.click})
-    // )
-
-    // this.setState((squaresMap, props) => ({
-    //   friends: squaresMap + props
-    //   // ^^setting this to friends breaks when clicking on image square on page... what makes the state update?!
-    // }));
-
-    // this.setState({click: !this.state.click})
 
     // Reads if square was clicked before and displays message
     // Need to change to display on page********
