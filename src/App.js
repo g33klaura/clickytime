@@ -5,6 +5,7 @@ import './styles/App.css';
 import Navbar from './components/Navbar';
 import Squares from "./components/Squares";
 import friends from "./friends.json";
+import FlipMove from 'react-flip-move';
 
 
 class App extends Component {
@@ -55,7 +56,7 @@ class App extends Component {
     //   topScore = endScore;
     // }
 
-    // "incorrect" message
+    // "incorrect" message ~DONE (if not resetting the state with baseState....)
 
     // reset game
     this.setState({
@@ -129,10 +130,10 @@ class App extends Component {
               {/* Game renders here within overall centered materialize div */}
 
               <main className="game-squares">
-                <Row>
+                <Row style={{position: "relative"}}>
 
                   {/* Each of 12 squares rendered within this row div */}
-
+                  <FlipMove staggerDurationBy={30} duration={750} enterAnimation={"accordionHorizontal"}>
                   {this.state.friends.map(friend => (
                     <Squares 
                       image={ friend.image }
@@ -143,7 +144,7 @@ class App extends Component {
                       handleClick={ this.handleClick }
                     />
                   ))}
-                  
+                  </FlipMove>
                 </Row>
               </main>
 
