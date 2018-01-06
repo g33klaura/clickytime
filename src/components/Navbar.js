@@ -11,7 +11,7 @@ const Navbar = props => (
   <header className="App-header">
     <h1 className="App-title">ClickyTime</h1>
     {/*<p className="score">Score goes here!</p>*/}
-    <p className="score">Score: { props.score } out of 12</p>
+    <p className="score">Score: { props.score } out of 12 | Top Score: { props.topScore }</p>
     <p className="message">{ props.message }</p>
   </header>
 );
