@@ -13,14 +13,16 @@
   bottom: 100%;
 }
 
-.score {
-  float: left;
+.score, .message {
   position: relative;
-  bottom: 300%;
+  bottom: 320%;
+  font-size: 20px;
+}
+
+.score {
+  float: right;
 }
 
 .message {
-  float: right;
-  position: relative;
-  bottom: 300%;
+  float: left;
 }
