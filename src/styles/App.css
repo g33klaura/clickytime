@@ -2,11 +2,7 @@
   text-align: center;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-} */
-
+/* Header where navbar is contained */
 .App-header {
   background-color: #FF9387;
   height: 80px;
@@ -14,28 +10,12 @@
   color: white;
 }
 
-.App-title {
-  font-size: 3.5em;
-  /* positions title within default header for now */
-  position: relative;
-  bottom: 100%;
-}
-
+/* Game instructions */
 .App-intro {
   font-size: large;
 }
 
-/* @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
-
-.score {
-  float: right;
-  position: relative;
-  bottom: 300%;
-}
-
+/* Actual game container */
 .Game {
   margin-top: 25px;
 }
