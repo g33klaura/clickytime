@@ -16,16 +16,21 @@ class App extends Component {
       score: 0,
       message: "Good luck!"
     };
-    console.log(this.props);
+    // console.log(this.props);
+
+    // preserve initial state in new object
+    this.baseState = this.state;
+    // console.log(this.baseState);
+    // console.log(this.baseState.friends);
   }
   
-  handleCorrect() {
+  correctGuess = () => {
     // "correct, keep going" message ~DONE
     // shuffle squares
-    // score +1 
+    // score +1 ~DONE
     let scoreValue = this.state.score;
     ++scoreValue;
-    console.log(scoreValue);
+    // console.log(scoreValue);
     
     // if score hits 12, "you win"
     if (scoreValue === 12) {
@@ -41,7 +46,7 @@ class App extends Component {
     }
   }
 
-  handleWrong() {
+  wrongGuess = () => {
     // supposed to have something saving a high score??*************************
     let endScore = this.state.score;
     console.log(endScore);
@@ -49,13 +54,21 @@ class App extends Component {
     // if (endScore > topScore) {
     //   topScore = endScore;
     // }
-    // "incorrect" message ~DONE
+
+    // "incorrect" message
+
     // reset game
     this.setState({
-      // friends: {click: false},  //resets squares to initial state?
+      // friends,  //resets squares to initial state?
       score: 0,
       message: "Wrong! Sorry you lose!"
     });
+    // maybe add toast or modal with loosing message if "this.baseState" works better to reset
+  }
+
+  resetGame = () => {
+    // resets components to initial state (click: false, score: 0, etc.)
+    this.setState(this.baseState.friends);
   }
 
   handleClick = (id) => {
@@ -92,11 +105,8 @@ class App extends Component {
       friends: squaresMap
     });
 
-    // Reads if square was clicked before and displays message
-    // Need to change to display on page********
-    // guessedCorrectly ? console.log("Correct guess") : console.log("Incorrect guess");
-    
-    guessedCorrectly ? this.handleCorrect() : this.handleWrong();
+    // Determines if square was clicked before and fires appropriate function
+    guessedCorrectly ? this.correctGuess() : this.wrongGuess();
   }
 
 
