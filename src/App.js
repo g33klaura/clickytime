@@ -9,7 +9,6 @@ import friends from "./friends.json";
 
 class App extends Component {
 
-  // Working out state for navbar...
   constructor(props) {
     super(props);
     this.state = {
@@ -20,11 +19,50 @@ class App extends Component {
     console.log(this.props);
   }
   
+  handleCorrect() {
+    // "correct, keep going" message ~DONE
+    // shuffle squares
+    // score +1 
+    let scoreValue = this.state.score;
+    ++scoreValue;
+    console.log(scoreValue);
+    
+    // if score hits 12, "you win"
+    if (scoreValue === 12) {
+      this.setState({
+        score: scoreValue,
+        message: "You win!!"
+      });
+    } else {
+      this.setState({
+        score: scoreValue,
+        message: "Correct! Keep going."
+      });
+    }
+  }
+
+  handleWrong() {
+    // supposed to have something saving a high score??*************************
+    let endScore = this.state.score;
+    console.log(endScore);
+
+    // if (endScore > topScore) {
+    //   topScore = endScore;
+    // }
+    // "incorrect" message ~DONE
+    // reset game
+    this.setState({
+      // friends: {click: false},  //resets squares to initial state?
+      score: 0,
+      message: "Wrong! Sorry you lose!"
+    });
+  }
+
   handleClick = (id) => {
     // ^^Stores the id of image clicked in parameter
 
     // console.log("Image clicked");
-    console.log(id);
+    // console.log(id);
 
     // Compared whether or not been clicked before 
     let guessedCorrectly = false;
@@ -56,11 +94,10 @@ class App extends Component {
 
     // Reads if square was clicked before and displays message
     // Need to change to display on page********
-    guessedCorrectly ? console.log("Correct guess") : console.log("Incorrect guess");
+    // guessedCorrectly ? console.log("Correct guess") : console.log("Incorrect guess");
+    
+    guessedCorrectly ? this.handleCorrect() : this.handleWrong();
   }
-
-
-
 
 
   render() {
@@ -74,17 +111,18 @@ class App extends Component {
 
         <Container>
           <p className="App-intro">
-            How good is your memory? Click on each square only once!
+            How good is your memory? Click each square ONCE!
           </p>
           <Row className="Game">
             <Col s={12} className={"center-align"}>
             
-              {/* Game component renders here within overall centered materialize div */}
-              {/*<Game />*/}
+              {/* Game renders here within overall centered materialize div */}
 
               <main className="game-squares">
                 <Row>
+
                   {/* Each of 12 squares rendered within this row div */}
+
                   {this.state.friends.map(friend => (
                     <Squares 
                       image={ friend.image }
@@ -95,6 +133,7 @@ class App extends Component {
                       handleClick={ this.handleClick }
                     />
                   ))}
+                  
                 </Row>
               </main>
 
