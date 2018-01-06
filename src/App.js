@@ -6,21 +6,27 @@ import Navbar from './components/Navbar';
 
 
 class App extends Component {
+
+  // Working out state for navbar...
+  constructor(props) {
+    super(props);
+    this.state = {
+      score: 0,
+      message: "Good luck!"
+    };
+    console.log(this.props);
+  }
+  
+
+
   render() {
     return (
       <div className="App">
 
-          {/* <header className="App-header"> */}
-            {/* <h1 className="App-title">ClickyTime</h1>
-            <p className="score">Score goes here!</p> */}
-        {/*<Row>*/}
-          {/*<Col s={12} className={"center-align"}>*/}
-            <Navbar />
-          {/*</Col>*/}
-        {/*</Row>*/}
-
-            
-          {/* </header> */}
+        <Navbar 
+          score={this.state.score}
+          message={this.state.message}
+        />
 
         <Container>
           <p className="App-intro">
@@ -28,6 +34,7 @@ class App extends Component {
           </p>
           <Row className="Game">
             <Col s={12} className={"center-align"}>
+            
               {/* Game component renders here within overall centered materialize div */}
               <Game />
 
