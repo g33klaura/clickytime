@@ -1,20 +1,20 @@
-import React from 'react';
-import { Row } from 'react-materialize';
+import React, { Component } from 'react';
+import { Row, Col, Container } from 'react-materialize';
 import '../styles/Game.css';
-import Squares from "./Squares";
 import Navbar from './Navbar';
+import Squares from "./Squares";
 import friends from "../friends.json";
 
 
 // Component class for rendering all game squares from friends.json
-class Game extends React.Component {
+class Game extends Component {
 
   constructor(props) {
     super(props);
     this.state = { 
-      friends
-      // score: 0,
-      // message: null
+      friends,
+      score: 0,
+      message: "Good luck!"
     };
     // console.log(this.props);
   }
