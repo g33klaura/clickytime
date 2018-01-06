@@ -1,0 +1,26 @@
+/* Header where navbar is contained */
+.App-header {
+  background-color: #FF9387;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 3.5em;
+  /* positions title within default header for now */
+  position: relative;
+  bottom: 100%;
+}
+
+.score {
+  float: left;
+  position: relative;
+  bottom: 300%;
+}
+
+.message {
+  float: right;
+  position: relative;
+  bottom: 300%;
+}
