@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-materialize';
 import './styles/App.css';
 import Game from './components/Game';
+import Navbar from './components/Navbar';
 
 
 class App extends Component {
@@ -9,11 +10,17 @@ class App extends Component {
     return (
       <div className="App">
 
-          {/*Switch to navbar?*/}
-          <header className="App-header">
-            <h1 className="App-title">ClickyTime</h1>
-            <p className="score">Score goes here!</p>
-          </header>
+          {/* <header className="App-header"> */}
+            {/* <h1 className="App-title">ClickyTime</h1>
+            <p className="score">Score goes here!</p> */}
+        {/*<Row>*/}
+          {/*<Col s={12} className={"center-align"}>*/}
+            <Navbar />
+          {/*</Col>*/}
+        {/*</Row>*/}
+
+            
+          {/* </header> */}
 
         <Container>
           <p className="App-intro">
