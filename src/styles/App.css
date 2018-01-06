@@ -15,7 +15,7 @@
   font-size: large;
 }
 
-/* Actual game container */
-/* .Game {
-  margin-top: 25px;
-} */
+.game-squares {
+  /* overflow: hidden; */
+  position: relative;
+}
