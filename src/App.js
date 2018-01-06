@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Squares from "./components/Squares";
 import friends from "./friends.json";
 import FlipMove from 'react-flip-move';
+import shuffle from 'lodash/shuffle';
 
 
 class App extends Component {
@@ -72,6 +73,13 @@ class App extends Component {
     this.setState(this.baseState.friends);
   }
 
+  // sortShuffle() {
+  //   this.setState({
+  //     sortingMethod: 'shuffle',
+  //     articles: shuffle(this.state.articles)
+  //   });
+  // }
+
   handleClick = (id) => {
     // ^^Stores the id of image clicked in parameter
 
@@ -103,7 +111,8 @@ class App extends Component {
     console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
     this.setState({
-      friends: squaresMap
+      sortingMethod: 'shuffle',
+      friends: shuffle(squaresMap)
     });
 
     // Determines if square was clicked before and fires appropriate function
