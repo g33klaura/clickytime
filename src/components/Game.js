@@ -2,6 +2,7 @@ import React from 'react';
 import { Row } from 'react-materialize';
 import '../styles/Game.css';
 import Squares from "./Squares";
+import Navbar from './Navbar';
 import friends from "../friends.json";
 
 
@@ -11,9 +12,9 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      friends,
-      score: 0,
-      message: null
+      friends
+      // score: 0,
+      // message: null
     };
     // console.log(this.props);
   }
@@ -38,19 +39,17 @@ class Game extends React.Component {
 
           newFriendData.click = true;
           guessedCorrectly = true;
-          // Now the -next- time that same square is clicked, it should set to false and stop the game.... right??
+          // Now the -next- time that same square is clicked, it should set to false and stop the game.... right?? ~ Stops game, yes, set to false no
+            // The next time the square is clicked, "incorrect guess" logs -- don't need to set to false until the game resets. this isn't "switching" true and false like still and animate
           console.log(friend);
         } 
         // console.log(newFriendData);
-        
       }
       return newFriendData;
-         
     });
 
     console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
-    // what makes this re-render changes in the dom.......
     this.setState({
       friends: squaresMap
     });
@@ -81,7 +80,6 @@ class Game extends React.Component {
               key={ friend.id }
               id={ friend.id }
               click={ friend.click }
-              // handleClick={() => this.handleClick(friend.id)}
               handleClick={ this.handleClick }
             />
           ))}
