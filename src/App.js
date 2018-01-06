@@ -16,6 +16,7 @@ class App extends Component {
     this.state = {
       friends,
       score: 0,
+      // topScore: 0,
       message: "Good luck!"
     };
     // console.log(this.props);
@@ -26,6 +27,13 @@ class App extends Component {
     // console.log(this.baseState.friends);
   }
   
+
+  resetGame = () => {
+    // resets components to initial state (click: false, score: 0, etc.)
+    this.setState(this.baseState.friends);
+  }
+
+
   correctGuess = () => {
     // "correct, keep going" message ~DONE
     // shuffle squares
@@ -48,6 +56,7 @@ class App extends Component {
     }
   }
 
+
   wrongGuess = () => {
     // supposed to have something saving a high score??*************************
     let endScore = this.state.score;
@@ -55,7 +64,7 @@ class App extends Component {
 
     // if (endScore > topScore) {
     //   topScore = endScore;
-    // }
+    // } 
 
     // "incorrect" message ~DONE (if not resetting the state with baseState....)
 
@@ -63,15 +72,15 @@ class App extends Component {
     this.setState({
       // friends,  //resets squares to initial state?
       score: 0,
-      message: "Wrong! Sorry you lose!"
-    });
+      message: "Sorry, you lose!"
+    })
+    // .then(this.resetGame());
+
     // maybe add toast or modal with loosing message if "this.baseState" works better to reset
   }
 
-  resetGame = () => {
-    // resets components to initial state (click: false, score: 0, etc.)
-    this.setState(this.baseState.friends);
-  }
+
+  
 
   // sortShuffle() {
   //   this.setState({
@@ -79,6 +88,7 @@ class App extends Component {
   //     articles: shuffle(this.state.articles)
   //   });
   // }
+
 
   handleClick = (id) => {
     // ^^Stores the id of image clicked in parameter
@@ -110,6 +120,8 @@ class App extends Component {
 
     console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
+    // Triggers shuffle effect when square is clicked ~ should this be separate in the correctGuess / wrongGuess functions?...
+    // the example shuffles AND shakes when game is lost
     this.setState({
       sortingMethod: 'shuffle',
       friends: shuffle(squaresMap)
@@ -126,6 +138,7 @@ class App extends Component {
 
         <Navbar 
           score={this.state.score}
+          topScore={this.state.topScore}
           message={this.state.message}
         />
 
