@@ -1,3 +1,13 @@
+// Ln 76 of react-fli-move docs "1_Shuffle.jsx"
+// https://github.com/joshwcomeau/react-flip-move/blob/gh-pages/examples/components/1_Shuffle.jsx
+// sortShuffle() {
+  //   this.setState({
+  //     sortingMethod: 'shuffle',
+  //     articles: shuffle(this.state.articles)
+  //   });
+// }
+
+
 // ****************************************************************************
 // Map over each image in 'img' rather than importing each one
 // Thank you this guy: https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
