@@ -19,32 +19,24 @@ class App extends Component {
       topScore: 0,
       message: "Good luck!"
     };
-    // console.log(this.props);
-
-    // preserve initial state in new object
-    // this.baseState = this.state;
-    // console.log(this.baseState);
-    // console.log(this.baseState.friends);
-    // const friendsBaseState = this.baseState.friends;
-    // console.log(friendsBaseState);
   }
   
 
   resetGame = () => {
-    // resets components to initial state (click: false, score: 0, etc.)
-    // this.setState(this.baseState.friends);
-
+    // Checks if player score beats their top score
     let endScore = this.state.score;
-    console.log(endScore);
+    // console.log(endScore);
 
     let newTopScore = this.state.topScore;
 
+    // If endScore beats topScore, update topScore
     if (endScore >= newTopScore) {
       newTopScore = endScore;
     }
 
+    // resets components to initial state (friends.click: false, score: 0, new encouraging message)
+    // can I get the shake animation to trigger here? similar to the shuffle setState call?***********
     this.setState({
-      // friendsBaseState,
       friends,
       score: 0,
       topScore: newTopScore,
@@ -59,10 +51,10 @@ class App extends Component {
     // score +1 ~DONE
     let scoreValue = this.state.score;
     ++scoreValue;
-    // console.log(scoreValue);
     
     // if score hits 12, "you win"
     if (scoreValue === 12) {
+      // instead needs to call resetGame here, but "you win" modal would be nice*****
       this.setState({
         score: scoreValue,
         message: "You win!!"
@@ -77,61 +69,13 @@ class App extends Component {
 
 
   wrongGuess = () => {
-    // supposed to have something saving a high score??*************************
-    // let endScore = this.state.score;
-    // console.log(endScore);
-
-    // let newTopScore = this.state.topScore;
-
-    // // if the endScore is greater than/equal to the current topScore...
-    // if (endScore >= newTopScore) {
-    //   // set the new topScore equal to endScore
-    //   newTopScore = endScore;
-    //   console.log(newTopScore);
-    //   // this.resetGame();  //for now to test top score rendering
-    // } else {
-    //   console.log(newTopScore);
-    //   this.resetGame();
-    // }
-    
-    // THINK THIS NEEDS TO BE CALLED OUTSIDE THE IF STATEMENT, but see what happens first.....
-    // set topScore then call resetGame
-    // this.setState({topScore: newTopScore})
-    // .then(setTimeout(() => {
-    //   this.resetGame()
-    // }, 2000));
-
-    // "incorrect" message ~DONE (if not resetting the state with baseState....)
-
-    // reset game
-    // this.setState({
-    //   // friends,  //resets squares to initial state?
-    //   score: 0,
-    //   message: "Sorry, you lose!"
-    // })
-    // .then(this.resetGame());
-
+    // Moved updating topScore logic to resetGame 
     this.resetGame();
-
-    // maybe add toast or modal with loosing message if "this.baseState" works better to reset
   }
-
-
-  
-
-  // sortShuffle() {
-  //   this.setState({
-  //     sortingMethod: 'shuffle',
-  //     articles: shuffle(this.state.articles)
-  //   });
-  // }
 
 
   handleClick = (id) => {
     // ^^Stores the id of image clicked in parameter
-
-    // console.log("Image clicked");
-    // console.log(id);
 
     // Compared whether or not been clicked before 
     let guessedCorrectly = false;
@@ -146,11 +90,10 @@ class App extends Component {
 
           newFriendData.click = true;
           guessedCorrectly = true;
-          // Now the -next- time that same square is clicked, it should set to false and stop the game.... right?? ~ Stops game, yes, set to false no
-            // The next time the square is clicked, "incorrect guess" logs -- don't need to set to false until the game resets. this isn't "switching" true and false like still and animate
+            // The next time the square is clicked, doesn't need to set to false until the game resets. 
+            // (this isn't "switching" true and false like still and animate)
           // console.log(friend);
-        } 
-        // console.log(newFriendData);
+        }
       }
       return newFriendData;
     });
@@ -180,7 +123,7 @@ class App extends Component {
 
         <Container>
           <p className="App-intro">
-            How good is your memory? Click each square ONCE!
+            How good is your memory? Click each square only ONCE!
           </p>
           <Row className="Game">
             <Col s={12} className={"center-align"}>
