@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       friends,
       score: 0,
-      // topScore: 0,
+      topScore: 0,
       message: "Good luck!"
     };
     // console.log(this.props);
@@ -34,10 +34,20 @@ class App extends Component {
     // resets components to initial state (click: false, score: 0, etc.)
     // this.setState(this.baseState.friends);
 
+    let endScore = this.state.score;
+    console.log(endScore);
+
+    let newTopScore = this.state.topScore;
+
+    if (endScore >= newTopScore) {
+      newTopScore = endScore;
+    }
+
     this.setState({
       // friendsBaseState,
       friends,
       score: 0,
+      topScore: newTopScore,
       message: "Try again"
     });
   }
@@ -45,7 +55,7 @@ class App extends Component {
 
   correctGuess = () => {
     // "correct, keep going" message ~DONE
-    // shuffle squares
+    // shuffle squares ~DONE
     // score +1 ~DONE
     let scoreValue = this.state.score;
     ++scoreValue;
@@ -68,12 +78,28 @@ class App extends Component {
 
   wrongGuess = () => {
     // supposed to have something saving a high score??*************************
-    let endScore = this.state.score;
-    console.log(endScore);
+    // let endScore = this.state.score;
+    // console.log(endScore);
 
-    // if (endScore > topScore) {
-    //   topScore = endScore;
-    // } 
+    // let newTopScore = this.state.topScore;
+
+    // // if the endScore is greater than/equal to the current topScore...
+    // if (endScore >= newTopScore) {
+    //   // set the new topScore equal to endScore
+    //   newTopScore = endScore;
+    //   console.log(newTopScore);
+    //   // this.resetGame();  //for now to test top score rendering
+    // } else {
+    //   console.log(newTopScore);
+    //   this.resetGame();
+    // }
+    
+    // THINK THIS NEEDS TO BE CALLED OUTSIDE THE IF STATEMENT, but see what happens first.....
+    // set topScore then call resetGame
+    // this.setState({topScore: newTopScore})
+    // .then(setTimeout(() => {
+    //   this.resetGame()
+    // }, 2000));
 
     // "incorrect" message ~DONE (if not resetting the state with baseState....)
 
@@ -122,7 +148,7 @@ class App extends Component {
           guessedCorrectly = true;
           // Now the -next- time that same square is clicked, it should set to false and stop the game.... right?? ~ Stops game, yes, set to false no
             // The next time the square is clicked, "incorrect guess" logs -- don't need to set to false until the game resets. this isn't "switching" true and false like still and animate
-          console.log(friend);
+          // console.log(friend);
         } 
         // console.log(newFriendData);
       }
@@ -131,8 +157,7 @@ class App extends Component {
 
     // console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
-    // Triggers shuffle effect when square is clicked ~ should this be separate in the correctGuess / wrongGuess functions?...
-    // the example shuffles AND shakes when game is lost
+    // Triggers shuffle effect when square is clicked
     this.setState({
       sortingMethod: 'shuffle',
       friends: shuffle(squaresMap)
