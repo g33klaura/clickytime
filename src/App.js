@@ -22,15 +22,24 @@ class App extends Component {
     // console.log(this.props);
 
     // preserve initial state in new object
-    this.baseState = this.state;
+    // this.baseState = this.state;
     // console.log(this.baseState);
     // console.log(this.baseState.friends);
+    // const friendsBaseState = this.baseState.friends;
+    // console.log(friendsBaseState);
   }
   
 
   resetGame = () => {
     // resets components to initial state (click: false, score: 0, etc.)
-    this.setState(this.baseState.friends);
+    // this.setState(this.baseState.friends);
+
+    this.setState({
+      // friendsBaseState,
+      friends,
+      score: 0,
+      message: "Try again"
+    });
   }
 
 
@@ -69,12 +78,14 @@ class App extends Component {
     // "incorrect" message ~DONE (if not resetting the state with baseState....)
 
     // reset game
-    this.setState({
-      // friends,  //resets squares to initial state?
-      score: 0,
-      message: "Sorry, you lose!"
-    })
+    // this.setState({
+    //   // friends,  //resets squares to initial state?
+    //   score: 0,
+    //   message: "Sorry, you lose!"
+    // })
     // .then(this.resetGame());
+
+    this.resetGame();
 
     // maybe add toast or modal with loosing message if "this.baseState" works better to reset
   }
@@ -118,7 +129,7 @@ class App extends Component {
       return newFriendData;
     });
 
-    console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
+    // console.log(squaresMap);  //NOW returns the changed image AND the rest of the un-changed images
     
     // Triggers shuffle effect when square is clicked ~ should this be separate in the correctGuess / wrongGuess functions?...
     // the example shuffles AND shakes when game is lost
