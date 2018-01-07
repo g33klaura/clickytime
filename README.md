@@ -36,6 +36,8 @@ React, JSX, Materialize CSS, React-Materialize and React-Flip-Move packages
 
 ### Gameplay
 
+(If gifs aren't animating, please try clicking them to view by themselves)
+
 ###### Losing Game
 
 ![clicky_loss](./screenshots/clicky_loss.gif)
@@ -44,4 +46,4 @@ React, JSX, Materialize CSS, React-Materialize and React-Flip-Move packages
 
 ![clicky_win](./screenshots/clicky_win.gif)
 
-*Enjoy! (It's harder than it looks!) :lollipop: :sparkles: :lemon: *
+*Enjoy! (It's harder than it looks!)* :lollipop: :sparkles: :lemon:
