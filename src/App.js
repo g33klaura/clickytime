@@ -38,6 +38,7 @@ class App extends Component {
     // can I get the shake animation to trigger here? similar to the shuffle setState call?***********
     this.setState({
       friends,
+      // friends: animation(),
       score: 0,
       topScore: newTopScore,
       message: "Try again"
