@@ -9,11 +9,13 @@
 <!-- Use extension to make TOC -->
 <!-- ## Contents -->
 
-<!-- ## Concept -->
+## Concept
+
+The goal of the game is to click each character image only once.
 
 ## Technologies Used
 
-React, JSX, Materialize CSS
+React, JSX, Materialize CSS, React-Materialize and React-Flip-Move packages
 
 ## Key Features
 
@@ -26,15 +28,20 @@ React, JSX, Materialize CSS
 
 ### Application Process
 
-1. The goal is to click each character image only once
 1. Click any square to begin
 1. Images will shuffle into random position when clicked
 1. Click a different image until all characters have been selected once
 1. Lose the game if you click any image twice
+1. Player's top score will update after each lost game
 
-### Screenshots
+### Gameplay
 
-*Coming soon!*
-<!-- ###### Image caption
-![Alt Text](url)
-*image caption test* -->
+###### Losing Game
+
+![clicky_loss](./screenshots/clicky_loss.gif)
+
+###### Winning Game
+
+![clicky_win](./screenshots/clicky_win.gif)
+
+*Enjoy! (It's harder than it looks!) :lollipop: :sparkles: :lemon: *
